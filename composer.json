@@ -25,7 +25,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "GymMed\\BagistoPackageTranslator\\": "src/"
+            "GymMed\\LaravelPackageTranslator\\": "src/"
         }
     },
     "extra": {

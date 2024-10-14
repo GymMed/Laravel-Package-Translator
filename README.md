@@ -27,11 +27,11 @@ package-translator:translate {package} {translateFrom} {translateTo} {--comments
 
 #### Explanation of Arguments:
 
-{package}: The package path, e.g., Namespace/PackageName
-{translateFrom}: The source translation file, e.g., en/app
-{translateTo}: The target translation file, e.g., lt/app
-{--comments}: (Optional) If you want to include comments.
-{--force}: (Optional) If you want to force the operation.
+-   {package}: The package path, e.g., Namespace/PackageName
+-   {translateFrom}: Language code with source translation file, e.g., en/app
+-   {translateTo}: Language code with target translation file, e.g., lt/app
+-   {--comments}: (Optional) If you want to include comments.
+-   {--force}: (Optional) If you want to force the operation.
 
 usage example:
 
@@ -58,6 +58,48 @@ returned results:
 <div align="center">
   <img src="./preview/images/EN-TO-LT-Comments.png" alt="Translation results with comments."/>
 </div>
+
+as code from:
+
+```php
+return [
+  ...
+  'datagrid' => [
+      'toolbar' => [
+          'length-of' => ':length of',
+          'results'   => ':total Results',
+          'selected'  => ':total Selected',
+
+          'mass-actions' => [
+              'must-select-a-mass-action'        => 'You must select a mass action.',
+              'must-select-a-mass-action-option' => 'You must select a mass action\'s option.',
+              'no-records-selected'              => 'No records have been selected.',
+              'select-action'                    => 'Select Action',
+          ],
+        ...
+];
+```
+
+to:
+
+```php
+return [
+  ...
+  'datagrid' => [
+    'toolbar' => [
+        'length-of' => ' :length iš', /* :length of */
+        'results'   => ' :total Rezultatai', /* :total Results */
+        'selected'  => ' :total Pasirinkta', /* :total Selected */
+
+        'mass-actions' => [
+            'must-select-a-mass-action'        => 'Turite pasirinkti masinį veiksmą.', /* You must select a mass action. */
+            'must-select-a-mass-action-option' => 'Turite pasirinkti masinio veiksmo parinktį.', /* You must select a mass action\'s option. */
+            'no-records-selected'              => 'Nepasirinkta jokių įrašų.', /* No records have been selected. */
+            'select-action'                    => 'Pasirinkite Veiksmas', /* Select Action */
+        ],
+        ...
+];
+```
 
 If you decide you don't want comments anymore, you can use:
 
