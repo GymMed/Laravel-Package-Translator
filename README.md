@@ -39,6 +39,18 @@ usage example:
 php artisan package-translator:translate Webkul/Shop en/app lt/app
 ```
 
+will translate document from:
+
+```bash
+rootDirectory/packages/Webkul/Shop/src/Resources/lang/en/app.php
+```
+
+will create translated document in:
+
+```bash
+rootDirectory/packages/Webkul/Shop/src/Resources/lang/lt/app.php
+```
+
 returned results:
 
 <div align="center">
