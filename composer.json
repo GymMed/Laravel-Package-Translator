@@ -1,0 +1,42 @@
+{
+    "name": "gymmed/laravel-package-translator",
+    "description": "Translates laravel package language document using google translate. Works for ecommerce bagisto documents.",
+    "keywords": [
+        "gymmed",
+        "laravel-package-translator",
+        "package-translator",
+        "google-translate",
+        "php-array-translator",
+        "laravel",
+        "bagisto",
+        "translator",
+        "php"
+    ],
+    "homepage": "https://github.com/GymMed/Laravel-Package-Translator",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Gytis",
+            "email": "medelis.gytis@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "GymMed\\BagistoPackageTranslator\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GymMed\\LaravelPackageTranslator\\Providers\\LaravelPackageTranslatorServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "require": {
+        "stichoza/google-translate-php": "dev-master"
+    }
+}
