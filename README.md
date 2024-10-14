@@ -25,7 +25,7 @@ To use the command with arguments and options, follow this format:
 package-translator:translate {package} {translateFrom} {translateTo} {--comments} {--force}
 ```
 
-# Explanation of Arguments:
+#### Explanation of Arguments:
 
 {package}: The package path, e.g., Namespace/PackageName
 {translateFrom}: The source translation file, e.g., en/app
