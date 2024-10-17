@@ -84,7 +84,7 @@ class LaravelPackageTranslator
             throw new Exception("Couldn't open directory: {$fullToPath} . Make sure it exists!");
         }
 
-        $pattern = '/(?P<key>[\'"](.*?(?<!\\\\))[\'"])(?P<arrayEquals>\s*=>\s*)(?P<value>[\'"](.*?(?<!\\\\))[\'"])[ \t]*(?P<comma>,?)[ \t]*/';
+        $pattern = '/(?P<key>[\'"`](.*?(?<!\\\\))[\'"`])(?P<arrayEquals>\s*=>\s*)(?P<value>([`"\'])(.*?(?<!\\\\))\5)[ \t]*(?P<comma>,?)[ \t]*/';
 
         $translator = new GoogleTranslate();
         $translator->setSource($fromInformation->getLanguageCode());
