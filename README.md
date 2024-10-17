@@ -3,7 +3,7 @@
 </h1>
 <br/>
 <div align="center">
-  <img src="./preview/images/PackageTranslator.png" alt="Laravel Package Translator Logo."/>
+  <img src="./preview/images/1-PackageTranslator.png" alt="Laravel Package Translator Logo."/>
 </div>
 
 Neat way to translate [Laravel](https://github.com/laravel/laravel) package documents with google translate. Highly recommend for [Bagisto](https://github.com/bagisto/bagisto) package development.
