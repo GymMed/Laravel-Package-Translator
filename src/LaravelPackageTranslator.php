@@ -160,7 +160,7 @@ class LaravelPackageTranslator
         $placeholderMapping = [];  // To store the placeholder-to-variable mapping
 
         foreach ($variables as $index => $variable) {
-            $placeholder = ':' . ($index + 1);
+            $placeholder = '_' . ($index + 1) . '_';
             $value = str_replace($variable, $placeholder, $value);
             $placeholderMapping[$placeholder] = $variable;
         }
@@ -170,7 +170,7 @@ class LaravelPackageTranslator
 
     public static function restoreVariables($translatedValue, $placeholderMapping)
     {
-        // Replace each placeholder (e.g., :1, :2) with the original variable
+        // Replace each placeholder (e.g., _1_, _2_) with the original variable
         foreach ($placeholderMapping as $placeholder => $originalVariable) {
             //translator usually removes spaces after translating
             $originalVariableWithSpaces = ' ' . $originalVariable . ' ';
